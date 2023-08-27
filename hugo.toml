@@ -1,0 +1,10 @@
+[module.hugoVersion]
+min = "0.111.3"
+
+[params.hugopress.modules.aos.hooks.head-end]
+
+[params.hugopress.modules.aos.hooks.body-end]
+
+[params.aos]
+css_url = "https://unpkg.com/aos@next/dist/aos.css"
+js_url = "https://unpkg.com/aos@next/dist/aos.js"
