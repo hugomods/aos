@@ -1,0 +1,10 @@
+<script src="{{ site.Params.aos.js_url }}"></script>
+{{- $opts := dict
+  "targetPath" "js/aos-init.js"
+  "minify" hugo.IsProduction
+}}
+{{- $js := resources.Get "mods/aos/js/index.ts" | js.Build $opts }}
+{{- if hugo.IsProduction }}
+  {{- $js = $js | fingerprint }}
+{{- end }}
+<script src="{{ $js.RelPermalink }}"></script>
